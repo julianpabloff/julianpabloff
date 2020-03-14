@@ -1,9 +1,19 @@
 const imageSources = [
-	'bomberman.png',
-	'bomberman.png',
-	'bomberman.png',
-	'solitaire.png',
-	'ratscrew.png',
+	"bomberman.png",
+	"bomberman.png",
+	"bomberman.png",
+	"solitaire.png",
+	"ratscrew.png"
+];
+const projects = [
+	{
+		title: "Instaspam",
+		description: "A photo sharing website similar to Instagram in which users can upload images and like other people's images.",
+		imageUrl: "bomberman.png",
+		technologies: ["HTML", "CSS", "Javascript"],
+		sourceUrl: "https://github.com/Ne0nWinds/InstaSpam",
+		siteUrl: ""
+	}
 ];
 
 let selectedIndex = 0;
