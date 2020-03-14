@@ -1,0 +1,139 @@
+:root{
+	--text-color: #ddd;
+}
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #222;
+	color: var(--text-color);
+}
+header{
+	display: flex;
+	width: 100vw;
+	height: 85px;
+	position: absolute;
+	top: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #222;
+	/*border-bottom: 2px dashed #ddd;*/
+}
+	header ul{
+		display: flex;
+		list-style: none;
+	}
+	header ul li{
+		margin: 0 15px;
+	}
+
+div.header_placeholder{
+	height: 85px;
+}
+
+div.banner{
+	width: 100vw;
+	height: 300px;
+	background-image: url('JPS_9875_banner.jpg');
+	background-size: cover;
+	background-position: right center;
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+	div.blurb{
+		margin-left: 25vw;
+		width: 300px;
+	}
+		div.blurb h2{
+			margin-bottom: 10px;
+		}
+
+div.projects{
+	width: 1000px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 800px;
+}
+	div.projects h2{
+		margin-bottom: 15px;
+	}
+	div.thing{
+		width: 100%;
+		height: 400px;
+		display: flex;
+		position: relative;
+	}
+		div#cursor{
+			width: 3px;
+			height: 80px;
+			background-color: white;
+			position: absolute;
+			top: 0px;
+			transition: top 0.2s;
+		}
+		div.buttons{
+			display: flex;
+			flex-direction: column;
+			width: 30%;
+			height: 100%;
+		}
+			div.buttons button{
+				height: 20%;
+				font-size: 20px;
+				text-align: left;
+				font-weight: normal;
+				padding-left: 30px;
+				border-color: transparent;
+				color: #ddd;
+				background-color: #303030;
+			}
+				div.buttons button p{ color: #ddd; }
+				div.buttons button p.technology{ color: #888; }
+			div.buttons button:hover{
+				background-color: #3a3a3a;
+				color: #eee;
+			}
+			div.buttons button.selected{
+				font-weight: bolder;
+				color: white;
+				border-color: white;
+				background: linear-gradient(90deg, #606060 0%, #424242 60%);
+				/*transition: border-color 0.5s;*/
+			}
+				div.buttons button.selected p{ color: white; }
+				div.buttons button.selected p.technology{ color: #b0b0b0; }
+		div#preview{
+			background-image: url('bomberman.png');
+			background-size: fill;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 100%;
+			width: 70%;
+			text-align: center;
+		}
+			div#preview div.overlay{
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.5);
+			}
+			div#preview h3{
+				font-size: 38px;
+				text-shadow: 0 0 20px rgba(0,0,0,0.5);
+				padding: 20px 0 20px 10px;
+				background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+			}
+
+
+@media only screen and (min-width: 1500px) {
+	div.banner{
+		height: 20vw;
+	}
+}
+@media only screen and (max-width: 1060px) {
+	div.projects{
+		width: calc(100vw - 60px);
+	}
+}
