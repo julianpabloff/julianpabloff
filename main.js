@@ -18,7 +18,7 @@ const projects = [
 		title: "Wedding Planner",
 		description: "A website for creating wedding events. Users can create an account, add events, and RSVP.",
 		imageUrl: "games/bomberman.jpg",
-		technologies: ["C#", ".NET", "SQL", "HTML", "CSS"],
+		technologies: ["C#", ".NET", "SQL"],
 		sourceUrl: "https://github.com/Ne0nWinds/InstaSpam",
 		siteUrl: ""
 	},
@@ -26,7 +26,7 @@ const projects = [
 		title: "BomberMan",
 		description: "Inspired by a classic videogame, this app is a multiplayer game where you try to blow up the other players to win.",
 		imageUrl: "games/bomberman.jpg",
-		technologies: ["Javascript", "HTML", "CSS"],
+		technologies: ["Javascript", "Socket.io", "Node.js", "Express"],
 		sourceUrl: "https://github.com/Ne0nWinds/BomberMan",
 		siteUrl: ""
 	},
@@ -58,7 +58,8 @@ const techImgUrls = {
 	"C#" : "technologies/csharp.png",
 	".NET" : "technologies/dotnet.png",
 	"MongoDB" : "technologies/mongodb.png",
-	"SQL" : "technologies/sql.png"
+	"SQL" : "technologies/sql.png",
+	"Socket.io" : "technologies/socketio.png"
 };
 
 let selectedIndex = 0;
@@ -80,7 +81,8 @@ function selectProject(index) {
 	$("#techs").empty();
 	for(let tech of project.technologies) {
 		let url = techImgUrls[tech];
-		$("#techs").append("<div class=\"tech\" style=\"background-image: url(" + url + ");\"><span>" + tech + "</span></div>");
+		$("#techs").append("<div class=\"tech\"><img src=\"" + url + "\"><span>" + tech + "</span></div>");
+		//$("#techs").append("<div class=\"tech\" style=\"background-image: url(" + url + ");\"><span>" + tech + "</span></div>");
 	}
 
 	// Links
