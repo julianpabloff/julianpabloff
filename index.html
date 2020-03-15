@@ -6,6 +6,8 @@
 	<title>The COOL Dude</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="main.js"></script>
 </head>
@@ -26,49 +28,58 @@
 			<p>My name is Julian Pabloff and I am a really cool person. You should hire me for your job because I am the most talented person when it comes to everything</p>
 		</div>
 	</div>
+	<!--<h2 id="projects">Some of my work</h2>-->
 	<div class="projects">
-		<h2>PROJECTS</h2>
-		<div class="thing">
-			<div id="cursor"></div>
-			<div class="buttons">
-				<button onclick="selectProject(0)">
-					<p>Instaspam</p>
-					<p class="technology">React</p>
-				</button>
-				<button onclick="selectProject(1)">
-					<p>Wedding Planner</p>
-					<p class="technology">C#/.NET</p>
-				</button>
-				<button onclick="selectProject(2)">
-					<p>BomberMan</p>
-					<p class="technology">Socket.io</p>
-				</button>
-				<button onclick="selectProject(3)">
-					<p>Solitaire</p>
-					<p class="technology">Javascript</p>
-				</button>
-				<button onclick="selectProject(4)">
-					<p>Ratscrew</p>
-					<p class="technology">Javascript</p>
-				</button>
-			</div>
-			<div id="preview">
-				<div class="overlay">
-					<h3>BomberMan</h3>
-					<p>Inspired by a classic videogame, this app is a multiplayer game where you try to blow up the other players to win.</p>
-					<div class="techs">
-						<div class="tech"><p>HTML</p></div>
-						<div class="tech"><p>CSS</p></div>
-						<div class="tech"><p>JavaScript</p></div>
-					</div>
-					<div class="project_links">
-						<a href><span>Source Code</span></a>
-						<a href><span>Open Site</span></a>
-					</div>
-				</div>
+		<div id="cursor"></div>
+		<div class="buttons">
+			<button id="project0" class="selected" onclick="selectProject(0)">
+				<p>Instaspam</p>
+				<p class="technology">React</p>
+			</button>
+			<button id="project1" onclick="selectProject(1)">
+				<p>Wedding Planner</p>
+				<p class="technology">C#/.NET</p>
+			</button>
+			<button id="project2" onclick="selectProject(2)">
+				<p>BomberMan</p>
+				<p class="technology">Socket.io</p>
+			</button>
+			<button id="project3" onclick="selectProject(3)">
+				<p>Solitaire</p>
+				<p class="technology">Node.js</p>
+			</button>
+			<button id="project4" onclick="selectProject(4)">
+				<p>Ratscrew</p>
+				<p class="technology">Node.js</p>
+			</button>
+		</div>
+		<div id="preview">
+			<h3 id="title"></h3>
+			<p id="description"></p>
+			<div id="techs"></div>
+			<div class="project_links">
+				<a id="sourceUrl" href="" target="_blank"><span>Source Code</span></a>
+				<a id="siteUrl" href=""><span>Open Site</span></a>
 			</div>
 		</div>
 	</div>
+	<div class="contact">
+		<h2>Get In Touch</h2>
+		<div class="links">
+			<a id="email" href="mailto:julianpabloff@gmail.com">
+				<img src="img/contact/gmail.png">
+			</a>
+			<a id="linkedin" href="https://www.linkedin.com/in/julianpabloff" target="_blank">
+				<img src="img/contact/linkedin.png">
+			</a>
+			<a id="github" href="https://www.github.com/julianpabloff" target="_blank">
+				<img src="img/contact/github.png">
+			</a>
+		</div>
+	</div>
+	<footer>
+		<p>Copyright © 2020 by Julian Pabloff</p>
+	</footer>
 </body>
 
 </html>
