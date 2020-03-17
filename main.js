@@ -19,7 +19,7 @@ const projects = [
 		description: "A website for creating wedding events. Users can create an account, add events, and RSVP.",
 		imageUrl: "games/wedding.jpg",
 		technologies: ["C#", ".NET", "SQL"],
-		sourceUrl: "https://github.com/Ne0nWinds/InstaSpam",
+		sourceUrl: "https://github.com/julianpabloff/wedding_planner",
 		siteUrl: ""
 	},
 	{
