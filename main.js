@@ -9,7 +9,7 @@ const projects = [
 	{
 		title: "Instaspam",
 		description: "A photo sharing website similar to Instagram in which users can upload images and like other people's images.",
-		imageUrl: "games/bomberman.jpg",
+		imageUrl: "games/instaspam.jpg",
 		technologies: ["React", "Node.js", "Express", "MongoDB"],
 		sourceUrl: "https://github.com/Ne0nWinds/InstaSpam",
 		siteUrl: ""
@@ -17,7 +17,7 @@ const projects = [
 	{
 		title: "Wedding Planner",
 		description: "A website for creating wedding events. Users can create an account, add events, and RSVP.",
-		imageUrl: "games/bomberman.jpg",
+		imageUrl: "games/wedding.jpg",
 		technologies: ["C#", ".NET", "SQL"],
 		sourceUrl: "https://github.com/Ne0nWinds/InstaSpam",
 		siteUrl: ""

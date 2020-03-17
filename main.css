@@ -47,20 +47,30 @@ div.banner{
 	background-size: cover;
 	background-position: center center;
 	display: flex;
+	justify-content: center;
 	align-items: center;
 }
 	div.blurb{
-		margin-left: 16vw;
 		width: 350px;
-		outline: 1px solid red;
+		/*
+		padding: 15px;
+		border-radius: 8px;
+		background-color: rgba(0,0,0,0.5);
+		*/
 	}
 		div.blurb h2{
 			margin-bottom: 10px;
-			font-size: 30px;
+			font-size: 28px;
+			line-height: 27px;
 		}
 		div.blurb p{
-
+			font-size: 18px;
 		}
+	div.shoulder{
+		outline: 1px solid red;
+		width: 48%;
+		height: 100%;
+	}
 h2#projects{
 	font-weight: 400;
 }
@@ -220,7 +230,7 @@ div.contact{
 	justify-content: center;
 }
 	div.contact h2{
-		margin-bottom: 25px;
+		margin-bottom: 35px;
 	}
 	div.links{
 		width: 75%;
@@ -250,6 +260,15 @@ footer{
 	div#preview{ left: 0; }
 }
 @media only screen and (max-width: 770px) {
+	/*
+	div.banner{
+		justify-content: center;
+	}
+	div.blurb{
+		text-align: center;
+		margin: 0;
+	}
+	*/
 	div.projects{
 		width: 100%;
 	}
@@ -261,7 +280,7 @@ footer{
 		font-size: 30px;
 	}
 	div#preview p{
-		font-size: 16px;
+		font-size: 18px;
 	}
 	div.tech span{
 		font-size: 14px;
