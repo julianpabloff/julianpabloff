@@ -112,7 +112,7 @@ div.projects{
 			left: -125px;
 			transition: left 0.3s;
 		}
-			div.buttons button{
+			 button.big_btn{
 				height: 20%;
 				font-size: 20px;
 				text-align: left;
@@ -121,17 +121,17 @@ div.projects{
 				color: #ddd;
 				background-color: #303030;
 			}
-				div.buttons button p{ color: #ddd; }
-				div.buttons button p.technology{ color: #888; }
-			div.buttons button:hover{
+				button.big_btn p{ color: #ddd; }
+				button.big_btn p.technology{ color: #888; }
+			button.big_btn:hover{
 				background-color: #3a3a3a;
 			}
-			div.buttons button.selected{
+			button.big_btn.selected{
 				font-weight: bolder;
 				background: linear-gradient(90deg, #606060 0%, #424242 60%);
 			}
-				div.buttons button.selected p{ color: #eee; }
-				div.buttons button.selected p.technology{ color: #b0b0b0; }
+				button.big_btn.selected p{ color: #eee; }
+				button.big_btn.selected p.technology{ color: #b0b0b0; }
 		div#preview{
 			background-size: contain;
 			background-repeat: no-repeat;
@@ -160,18 +160,43 @@ div.projects{
 						text-shadow: 0 0 20px rgba(0,0,0,0.5);
 						cursor: default;
 					}
-					div#preview div.title button{
+					button.arrow_btn{
 						color: #ddd;
+						padding: 4px 10px;
+						border-radius: 3px;
+						transition: background-color .2s, color .5s;
 					}
-						div#preview div.title button span{
+					button.arrow_btn.hidden{
+						color: transparent;
+						background-color: transparent;
+						cursor: default;
+					}
+					/*
+					button.arrow_btn:hover{
+						background-color: rgba(200,200,200,0.4);
+					}
+					*/
+						button.arrow_btn span{
 							font-size: 22px;
 						}
-					button#left_arrow{
-
+						button.arrow_btn span::selection{
+							background-color: transparent;
+						}
+					button#left_arrow span:after{
+						content: "prev";
+						margin-left: 10px;
+						position: relative;
+						bottom: 1px;
+					}
+					button#right_arrow span:before{
+						content: "next";
+						margin-right: 10px;
+						position: relative;
+						bottom: 1px;
 					}
 				div#preview p{
 					width: 600px;
-					height: 60px;
+					height: 90px;
 					max-width: 90vw;
 					font-size: 22px;
 					display: flex;
@@ -303,7 +328,7 @@ footer{
 		background-size: cover;
 	}
 	div#preview div.title h3{
-		font-size: 28px;
+		font-size: 26px;
 	}
 	div#preview p{
 		font-size: 18px;
@@ -313,5 +338,22 @@ footer{
 	}
 	div.project_links a{
 		font-size: 16px;
+	}
+	button.arrow_btn{
+		background-color: rgba(200,200,200,0.4);
+		transition: background-color 0.5s;
+	}
+	button#left_arrow span:after{
+		content: "";
+		margin: 0;
+	}
+	button#right_arrow span:before{
+		content: "";
+		margin: 0;
+	}
+}
+@media only screen and (min-width: 771px) {
+	button.arrow_btn{
+		background-color: transparent;
 	}
 }

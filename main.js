@@ -113,4 +113,51 @@ function moveCursor(index) {
 
 $(document).ready(function() {
 	selectProject(0);
+
+	let windowWidth = $(window).width();
+	let arrowButtonsActive = true;
+
+	function setSize() {
+		windowWidth = $(window).width();
+		if (windowWidth <= 750) {
+			$("button.arrow_btn").css("background-color", "rgba(200,200,200,0.4)");
+		} else {
+			$("button.arrow_btn").css("background-color", "transparent");
+		}
+		if (windowWidth < 1040) {
+			arrowButtonsActive = true;
+			$("button.arrow_btn").removeClass("hidden");
+		} else {
+			arrowButtonsActive = false;
+			$("button.arrow_btn").addClass("hidden");
+		}
+	}
+	setSize();
+
+	$(window).resize(() => setSize());
+	
+	$("button.arrow_btn").click(function() {
+		if (arrowButtonsActive) {
+			let id = $(this).attr("id");
+			if (id == "left_arrow") cycleProject(-1);
+			else if (id == "right_arrow") cycleProject(1);
+
+			if (windowWidth <= 750) {
+			// Light up little buttons
+			$(this).css("background-color", "rgba(200,200,200,0.8)");
+			setTimeout(() => {
+				$(this).css("background-color", "rgba(200,200,200,0.4)");
+			}, 200);
+			}
+		}
+	});
+
+	$("button.arrow_btn").mouseenter(function() {
+		if ($(window).width() > 770 && arrowButtonsActive)
+			$(this).css("background-color", "rgba(200,200,200,0.4)");
+	});
+	$("button.arrow_btn").mouseleave(function() {
+		if ($(window).width() > 770 && arrowButtonsActive)
+			$(this).css("background-color", "transparent");
+	});
 });
