@@ -31,6 +31,7 @@
 	</div>
 	<!--<h2 id="projects">Some of my work</h2>-->
 	<div class="projects">
+		<div id="buttons_cover"></div>
 		<div id="cursor"></div>
 		<div class="buttons">
 			<button id="project0" class="selected" onclick="selectProject(0)">
@@ -55,7 +56,15 @@
 			</button>
 		</div>
 		<div id="preview">
-			<h3 id="title"></h3>
+			<div class="title">
+				<button id="left_arrow" onclick="cycleProject(-1)">
+					<span>&lt;</span>
+				</button>
+				<h3 id="title"></h3>
+				<button id="right_arrow" onclick="cycleProject(1)">
+					<span>&gt;</span>
+				</button>
+			</div>
 			<p id="description"></p>
 			<div id="techs"></div>
 			<div class="project_links">

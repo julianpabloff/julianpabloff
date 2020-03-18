@@ -92,6 +92,11 @@ function selectProject(index) {
 	selectedIndex = index;
 }
 
+function cycleProject(direction) {
+	let index = (selectedIndex + direction + projects.length) % projects.length;
+	selectProject(index);
+}
+
 function killCursor(index) {
 	let cursor = document.getElementById("cursor");
 	let top = 80 * index + 40;

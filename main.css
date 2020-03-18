@@ -84,6 +84,15 @@ div.projects{
 	position: relative;
 	margin: 40px 0;
 }
+		div#buttons_cover{
+			width: 250px;
+			height: 400px;
+			background-color: #222;
+			position: absolute;
+			left: 125px;
+			transition: left 0.3s;
+			z-index: 2;
+		}
 		div#cursor{
 			width: 3px;
 			height: 80px;
@@ -138,12 +147,28 @@ div.projects{
 			position: absolute;
 			left: 125px;
 			transition: left 0.3s;
-			z-index: 2;
+			z-index: 3;
 			}
-				div#preview h3{
-					font-size: 38px;
-					text-shadow: 0 0 20px rgba(0,0,0,0.5);
+				div#preview div.title{
+					display: flex;
+					width: 90%;
+					justify-content: space-between;
+					align-items: center;
 				}
+					div#preview div.title h3{
+						font-size: 38px;
+						text-shadow: 0 0 20px rgba(0,0,0,0.5);
+						cursor: default;
+					}
+					div#preview div.title button{
+						color: #ddd;
+					}
+						div#preview div.title button span{
+							font-size: 22px;
+						}
+					button#left_arrow{
+
+					}
 				div#preview p{
 					width: 600px;
 					height: 60px;
@@ -255,7 +280,8 @@ footer{
 	}
 }
 @media only screen and (max-width: 1060px) {
-	div#cursor{ left: 0px; }
+	div#buttons_cover{ left: 0 }
+	div#cursor{ left: 0; }
 	div.buttons{ left: 0; }
 	div#preview{ left: 0; }
 }
@@ -276,8 +302,8 @@ footer{
 		width: 100%;
 		background-size: cover;
 	}
-	div#preview h3{
-		font-size: 30px;
+	div#preview div.title h3{
+		font-size: 28px;
 	}
 	div#preview p{
 		font-size: 18px;
